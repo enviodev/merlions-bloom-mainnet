@@ -1,15 +1,16 @@
 # yaml-language-server: $schema=./node_modules/envio/evm.schema.json
 name: Merlions-Bloom-Indexer
 networks:
-- id: 545
+- id: 747
   rpc_config:
-    url: https://testnet.evm.nodes.onflow.org
-  start_block: 6499523
+    url: https://mainnet.evm.nodes.onflow.org	
+  start_block: 1833705
   contracts:
   - name: MerlionsBloom
     address:
     # - 0x992ca660013553acfC1649418C490d91B4Ce5E42
-    - 0x2797Eb5a5E2E9d9F87aE905b307Dd71b296C105F
+    # - 0x2797Eb5a5E2E9d9F87aE905b307Dd71b296C105F
+    - 0x5ddAA080C1B055b39609815d4aE522615b2f0Fd3
     handler: src/EventHandlers.ts
     events:
     - event: CoinFlipped(address indexed user, uint256 requestId, uint256 amount)
