@@ -24,7 +24,7 @@ export default function FlipCoin({ setCoinAnimationState, setSelection }: FlipCo
 
     let currentDepositAmountKnown: bigint | undefined  = currentDepositAmount as bigint | undefined
 
-    // console.log({currentDepositAmount, amountError, isAmountFetching})
+    console.log({currentDepositAmount, amountError, isAmountFetching})
 
     const { 
         data: hash, 
@@ -48,6 +48,7 @@ export default function FlipCoin({ setCoinAnimationState, setSelection }: FlipCo
           abi,
           functionName: 'flipCoin',        
           value: currentDepositAmountKnown,
+          // value: BigInt(1e15),
         })
 
         setCoinAnimationState('flipping')
