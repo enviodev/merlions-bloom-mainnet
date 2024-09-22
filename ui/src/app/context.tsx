@@ -1,12 +1,11 @@
 'use client'
 
-import { wagmiAdapter, flowTestnet , projectId } from '@/config'
+import { wagmiAdapter, flowTestnet, flowMainnet , projectId } from '@/config'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { createAppKit } from '@reown/appkit/react' 
 import { mainnet, arbitrum, avalanche, base, optimism, polygon } from '@reown/appkit/networks'
 import React, { useEffect, type ReactNode } from 'react'
 import { cookieToInitialState, WagmiProvider, type Config } from 'wagmi'
-import { flowMainnet } from 'viem/chains'
 import { useWalletInfo } from '@reown/appkit/react'
  
 
@@ -30,8 +29,8 @@ const metadata = {
 const modal = createAppKit({
   adapters: [wagmiAdapter],
   projectId,  
-  networks: [ flowTestnet],
-  defaultNetwork: flowTestnet,
+  networks: [ flowMainnet],
+  defaultNetwork: flowMainnet,
   metadata: metadata,
   features: {
     analytics: true, // Optional - defaults to your Cloud configuration
