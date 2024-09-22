@@ -34,7 +34,12 @@ const modal = createAppKit({
   metadata: metadata,
   features: {
     analytics: true, // Optional - defaults to your Cloud configuration
+    email: false, // default to true
+    socials: [],
+    emailShowWallets: false, // default to true
   },
+  
+  
   themeVariables: {
     '--w3m-accent': '#03193D',
     '--w3m-color-mix-strength': 20,
